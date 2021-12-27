@@ -1,4 +1,4 @@
-import numpy as np
+from math import inf
 from sys import stdout
 from itertools import permutations
 
@@ -13,7 +13,7 @@ def travelling_salesman(names, distances, durations):
         - List of pub indices leading to los total duration.
         - The duration
         - The distance of the path with the lowest duration
-    Complexity: O(n!) where n is length of n-1 :(
+    Complexity: O(n!) where n is length of names-1 :(
     '''
     # According to Adam Andersson, the rules say we have to finish
     # at Andra Lång. As such the element is removed and then
@@ -24,10 +24,10 @@ def travelling_salesman(names, distances, durations):
     n_copy.remove("Andra Lång")
     perms = list(permutations(n_copy))
     perms = [x + ("Andra Lång",) for x in perms]
-    best_time = np.infty
+    best_time = inf
     # Only time gets compared so the "best" distance
     # will be that of the route with the shortest duration of travel
-    best_distance = np.infty
+    best_distance = inf
     best_route = 0
     for (i, p) in enumerate(perms):
         time = 0

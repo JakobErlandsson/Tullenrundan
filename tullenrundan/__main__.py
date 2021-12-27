@@ -6,7 +6,7 @@ PARSER = argparse.ArgumentParser(description="Tullenrundan Göteborg")
 
 # Skipping Mölndal to make it strictly Gothenburg and within the 'voi-zone'
 NAMES = ['Kville', 'Majorna', 'Johanneberg', 'Wärdshuset',
-         'Kålltorp', 'Lejonet', 'Andra Lång']
+         'Kålltorp', 'Lejonet', 'Andra Lång', 'Gamlestaden']
 
 
 def __main__():
